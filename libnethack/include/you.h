@@ -146,7 +146,7 @@ struct you {
     aligntyp ualignbase[CONVERT];       /* for ualign conversion record */
     int upantheon;
     schar uluck, moreluck;      /* luck and luck bonus */
-# define Luck   (u.uluck + u.moreluck)
+# define Luck   (gamestate.us[0].uluck + gamestate.us[0].moreluck)
 # define LUCKADD        3
     /* added value when carrying luck stone */
 # define LUCKMAX        10
@@ -212,7 +212,7 @@ struct you {
 
 };      /* end of `struct you' */
 
-# define Upolyd (u.umonnum != u.umonster)
+# define Upolyd (gamestate.us[0].umonnum != gamestate.us[0].umonster)
 
 #endif /* YOU_H */
 
